@@ -224,8 +224,14 @@ input[type=checkbox]#gnbcheck{ display: none; }
 }
 
 .card-wrap .card button{
-  border: none;
+  border: 1px solid #efefef;
   width: 100px;
+}
+
+.card-wrap .card button:hover{
+  border: 1px solid #666;
+  background: #fff;
+  cursor: pointer;
 }
 
 .card-wrap .card button a{
