@@ -73,6 +73,10 @@ input[type=checkbox]#gnbcheck{ display: none; }
   z-index: 100;
 }
 
+.navbar p{
+  display: inline;
+}
+
 .navbar img {
   width: 130px;
   height: auto;
