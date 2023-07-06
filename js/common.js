@@ -9,7 +9,7 @@ function scrollHandler() {
 
   $("section").each(function() {
     if($(window).scrollTop() >= $(this).position().top){
-      $(this).find(".page").animate({top: "0", opacity: "1"}, 800)
+      $(this).find(".page").animate({top: "0", opacity: "1"}, 500)
     }
   });
 
@@ -17,7 +17,7 @@ function scrollHandler() {
     $(".skill").each(function() {
       var skill = $(this);
       var percentage = skill.find(".percentage").text();
-      skill.find(".inner-bar").animate({width: percentage}, 1200);
+      skill.find(".inner-bar").animate({width: percentage}, 30);
     });
   }
 }
