@@ -1,15 +1,14 @@
 function scrollHandler() {
   if ($(window).scrollTop() >= $(".portfolio").position().top) {
-    $(".menu-right button").css("color","#222222");
-    $(".navbar img").attr("src","./img/yunlogo2.png");
+
+
   }else {
-    $(".menu-right button").css("color","white");
-    $(".navbar img").attr("src","./img/yunlogo.png");
+
   }
 
   $("section").each(function() {
     if($(window).scrollTop() >= $(this).position().top){
-      $(this).find(".page").animate({top: "0", opacity: "1"}, 500)
+      $(this).find(".page").animate({top: "0", opacity: "1"}, 700)
     }
   });
 
@@ -17,7 +16,7 @@ function scrollHandler() {
     $(".skill").each(function() {
       var skill = $(this);
       var percentage = skill.find(".percentage").text();
-      skill.find(".inner-bar").animate({width: percentage}, 30);
+      skill.find(".inner-bar").animate({width: percentage}, 1200);
     });
   }
 }
