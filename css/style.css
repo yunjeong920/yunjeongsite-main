@@ -278,7 +278,7 @@ input[type=checkbox]#gnbcheck{ display: none; }
 /* about */
 
 .about {
-  height: 100vh;
+  height: 105vh;
   text-align: center;
   /* background-color: #f9f9f9; */
   background: #769FCD;

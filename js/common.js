@@ -1,16 +1,4 @@
 function scrollHandler() {
-  if ($(window).scrollTop() >= $(".portfolio").position().top) {
-
-
-  }else {
-
-  }
-
-  $("section").each(function() {
-    if($(window).scrollTop() >= $(this).position().top){
-      $(this).find(".page").animate({top: "0", opacity: "1"}, 700)
-    }
-  });
 
   if($(window).scrollTop() >= $(".about").position().top){
     $(".skill").each(function() {
