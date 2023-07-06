@@ -1,11 +1,11 @@
 function scrollHandler() {
-  if ($(window).scrollTop() >= $(".portfolio").position().top) {
-    $(".menu-right button").css("color","#222222");
-    $(".navbar img").attr("src","./img/yunlogo2.png");
-  }else {
-    $(".menu-right button").css("color","white");
-    $(".navbar img").attr("src","./img/yunlogo.png");
-  }
+  // if ($(window).scrollTop() >= $(".portfolio").position().top) {
+  //   $(".menu-right button").css("color","#222222");
+  //   $(".navbar img").attr("src","./img/yunlogo2.png");
+  // }else {
+  //   $(".menu-right button").css("color","white");
+  //   $(".navbar img").attr("src","./img/yunlogo.png");
+  // }
 
   $("section").each(function() {
     if($(window).scrollTop() >= $(this).position().top){
