@@ -1,8 +1,15 @@
 @charset "UTF-8";
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,a,span,blockquote,th,tr,td,label{font-size: 1.6rem;}
-h1,h2,h3,h4,h5,h6,input,textarea,p,a,span,th,tr,td,button,select,label,div{font-family: 'NanumSquareNeo'; font-weight: 300;}
+h1,h2,h3,h4,h5,h6,input,textarea,p,a,span,th,tr,td,button,select,label,div
+{
+  font-family: 'Pretendard';
+  /* font-family: "Wanted Sans Variable", "Wanted Sans", -apple-system; */
+ font-weight: 300;
+}
 h1, h2, h3, h4, h5, h6, p{position: relative;z-index: 2}
+
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css");
 
 @font-face {
     font-family: 'NanumSquareNeo';
