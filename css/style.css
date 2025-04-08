@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
-.wrap{margin: 0 auto; position: relative; overflow: hidden; background: #121212;}
-.wrap video{filter: brightness(40%)}
-.wrap .visual{position: relative; overflow: hidden;}
-.wrap .visual video{width: 100%; display: block; }
-.wrap .visual h1{font-size: 7vw; color: #fff; position: absolute; left: 50%; top: 30%; transform: translateX(-50%);  font-weight: 900;  font-family: "Outfit", sans-serif;}
+.wrap{margin: 0 auto; position: relative; overflow: hidden; background: #121212; }
+.wrap video{filter: brightness(60%); transform: scale(1.4)}
+.wrap img{filter: brightness(60%); transform: scale(1.5)}
+.wrap .visual{position: relative; overflow: hidden; height: 100vh;}
+/*.wrap .visual video{width: 100%; display: block; }*/
+.wrap .visual img{width: 100%; }
+.wrap .visual h1{font-size: 7vw; color: #fff; position: absolute; left: 50%; top: 30%; transform: translateX(-50%);  font-weight: 900;  font-family: "Outfit", sans-serif; opacity: 0;}
 .wrap .visual h1 span{display: block; font-size: 4vw; letter-spacing: -2px;  font-family: "Neonderthaw", cursive; color: #EDE6F2;}
 
 
