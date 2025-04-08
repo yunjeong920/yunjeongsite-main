@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'HSBombaram';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .wrap{margin: 0 auto; position: relative; overflow: hidden; background: #121212; }
 .wrap video{filter: brightness(60%); transform: scale(1.4)}
 .wrap img{filter: brightness(60%); transform: scale(1.5)}
@@ -9,10 +16,15 @@
 .wrap .visual h1{font-size: 7vw; color: #fff; position: absolute; left: 50%; top: 30%; transform: translateX(-50%);  font-weight: 900;  font-family: "Outfit", sans-serif; opacity: 0;}
 .wrap .visual h1 span{display: block; font-size: 4vw; letter-spacing: -2px;  font-family: "Neonderthaw", cursive; color: #EDE6F2;}
 
-
-
-
-
+.pot_wrap{position: relative; background: #121212;}
+.pot_wrap section{width: 100%; height: 110vh; border-radius: 50px 50px 0 0; box-shadow: 0px 0px 30px rgba(0,0,0,0.3); overflow: hidden;}
+.pot_wrap section.section01{background: #c46271 }
+.pot_wrap section.section02{background: #000 }
+.pot_wrap section.section03{background: #222 }
+.pot_wrap section.section04{background: #545454 }
+.pot_wrap section.section05{background: #c2c2c2 }
+.pot_wrap section.section06{background: #fff }
+.pot_wrap section .width{display: flex; height:100%; align-items: center; justify-content: center;}
 
 
 
