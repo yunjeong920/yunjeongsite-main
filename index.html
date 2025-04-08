@@ -1,293 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>yunjeong Portfolio</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0"/>
-  <meta property="og:image" content="/img/port/thum.png">
-  <meta property="og:title" content="이윤정 포트폴리오">
-  <meta property="og:description" content="Leeyunjeong Portfolio">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/myinitial.css">
-  <link rel="stylesheet" href="./css/check.css">
-  <link rel="stylesheet" href="./css/login.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/media.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-  <script type="text/javascript" defer src="./js/common.js"></script>
+    <title>Yunjeong Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta property="og:image" content="/img/thum.png">
+    <meta property="og:title" content="이윤정 포트폴리오">
+    <meta property="og:description" content="Leeyunjeong Portfolio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Outfit:wght@900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/initial.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script type="text/javascript" defer src="./js/common.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
-  <!-- 모바일 버튼 -->
-  <input type="checkbox" id="gnbcheck" name="gnbcheck">
-  <label for="gnbcheck" id="gnbbtn">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
-  <!-- navigation bar -->
-  <div class="navbar">
-    <p>920px 이하는 지원하지 않습니다</p>
-    <ul class="menu-right">
-      <li><button id="profile-btn" class="fs-20">Profile</button>
-      <li><button id="port-btn" class="fs-20">Portfolio</button>
-      <li><button id="about-btn" class="fs-20">My Skill</button>
-    </ul>
-  </div>
-
-  <!-- 프로필 -->
-
-    <section class="profile">
-      <div class="wrap">
-        <div class="page">
-          <h3>PROFILE</h3>
-          <div class="line"></div>
-          <div class="pro-wrap">
-            <div class="profile-left">
-              <img src="./img/port/yun01.png" alt="">
-            </div>
-            <div class="profile-right">
-              <div class="edu">
-                <h2><i class="ri-graduation-cap-line"></i>교육</h2>
-                <p>그린컴퓨터아트학원 :<span> UI&UX 웹퍼블리셔 과정 수료</span></p>
-                <!-- <p>그린컴퓨터아트학원 :<span> 영상편집(프리미어, 에프터이펙트)</span></p> -->
-                <p>대구가톨릭대학교 :<span> 한국어교육학과 졸업</span></p>
-              </div>
-              <div class="myinfo edu">
-                <h2><i class="ri-article-line"></i>정보</h2>
-                <p>생년월일 : <span>1996.09.20</span></p>
-                <p>이름 : <span>이윤정</span></p>
-              </div>
-              <div class="myinfo edu">
-                <h2><i class="ri-file-mark-line"></i>경력</h2>
-                <p>웹에이전시 : <span>2022.04.03 ~</span></p>
-              </div>
-              <div class="story">
-                <p>성실함 꼼꼼함 세심함이 특기인 2년차 웹퍼블리셔입니다.</p>
-                <p>제 포트폴리오 페이지에 오신걸 환영합니다 :D</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="wrap">
+    <section class="visual">
+        <video muted loop autoplay playsinline>
+            <source src="./img/visual.mp4" type="video/mp4">
+        </video>
+        <h1><span>Lee yun jeong</span> Portfolio Page</h1>
     </section>
-
-  <!-- 포트폴리오 -->
-  <section class="portfolio">
-    <div class="wrap">
-      <div class="page">
-        <h3 class="fs-40 letter">PORTFOLIO</h3>
-        <div class="line"></div>
-        <div class="card-wrap">
-          <div class="card">
-            <div class="card-img">
-              <img src="./img/port/port-img01.png" alt="">
-            </div>
-            <div class="card-text">
-              <h4>대구신세계</h4>
-              <h4>DAEGU SHINSEGAE</h4>
-              <h5><i class="ri-code-s-slash-line"></i>USE</h5>
-              <p><span>HTML</span><span>CSS</span><span>SWIPER</span><span>반응형</span></p>
-              <h5><i class="ri-pie-chart-line"></i>참여율 100%</h5>
-              <div class="btn">
-                <button type="button"><a href="https://nero60.cafe24.com/" target="_blank">View Site</a></button>
-                <!-- <button type="button"><a href="https://github.com/yunjeong920/res-o-uel" target="_blank">Git Hub</a></button> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img">
-              <img src="./img/port/port-img02.png" alt="">
-            </div>
-            <div class="card-text">
-              <h4>녹양역 더씨엘59</h4>
-              <h4>분양홈페이지</h4>
-              <h5><i class="ri-code-s-slash-line"></i>USE</h5>
-              <p><span>HTML</span><span>CSS</span><span>SWIPER</span><span>반응형</span><span>JAVASCRIPT</span><span>JQUERY </span></p>
-              <h5><i class="ri-pie-chart-line"></i>참여율 100%</h5>
-              <div class="btn">
-                <button type="button"><a href="http://theciel59.store/" target="_blank">View Site</a></button>
-                <!-- <button type="button"><a href="https://github.com/yunjeong920/hanam" target="_blank">Git Hub</a></button> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img">
-              <img src="./img/port/port-img03.png" alt="">
-            </div>
-            <div class="card-text">
-              <h4>REDIYA</h4>
-              <h4>레디아테크놀러지</h4>
-              <h5><i class="ri-code-s-slash-line"></i>USE</h5>
-              <p><span>HTML</span><span>CSS</span><span>SWIPER</span> <span>반응형</span> <span>JAVASCRIPT</span><span>JQUERY </span> <span>SCSS</span></p>
-              <h5><i class="ri-pie-chart-line"></i>참여율 100%</h5>
-              <div class="btn">
-                <button type="button"><a href="http://rediya.co.kr/" target="_blank">View Site</a></button>
-                <!-- <button type="button"><a href="https://github.com/yunjeong920/naver-whale" target="_blank">Git Hub</a></button> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img">
-              <img src="./img/port/port-img04.png" alt="">
-            </div>
-            <div class="card-text">
-              <h4>BLOG MAKER</h4>
-              <h4>블로그메이커 랜딩페이지</h4>
-              <h5><i class="ri-code-s-slash-line"></i>USE</h5>
-              <p><span>HTML</span><span>CSS</span><span>BOOTSTRAP</span> <span>반응형</span> <span>JAVASCRIPT</span></p>
-              <h5><i class="ri-pie-chart-line"></i>참여율 100%</h5>
-              <div class="btn">
-                <button type="button"><a href="http://blogmaker.co.kr/" target="_blank">View Site</a></button>
-                <!-- <button type="button"><a href="https://github.com/yunjeong920/BR31-boot" target="_blank">Git Hub</a></button> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img">
-              <img src="./img/port/port-img05.jpg" alt="">
-            </div>
-            <div class="card-text">
-              <h4>코아멕스이노 잡페어2023</h4>
-              <h4>KOAMEX-INNO Job Fair</h4>
-              <h5><i class="ri-code-s-slash-line"></i>USE</h5>
-              <p><span>HTML</span><span>SCSS</span><span>KakaoAPI</span>  <span>JAVASCRIPT</span><span>JQUERY</span> <span>SWIPER</span></p>
-              <h5><i class="ri-pie-chart-line"></i>참여율 100%</h5>
-              <div class="btn">
-                <button type="button"><a href="http://koamex-innojobfair.com/" target="_blank">View Site</a></button>
-                <!-- <button type="button"><a href="https://github.com/yunjeong920/ssg-site" target="_blank">Git Hub</a></button> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img">
-              <img src="./img/port/port-img06.png" alt="">
-            </div>
-            <div class="card-text">
-              <h4>PREED</h4>
-              <h4>프리드라이프 가입센터</h4>
-              <h5><i class="ri-code-s-slash-line"></i>USE</h5>
-              <p><span>HTML</span><span>SCSS</span><span>KakaoAPI</span>  <span>JAVASCRIPT</span><span>JQUERY</span><span>SWIPER</span></p>
-              <h5><i class="ri-pie-chart-line"></i>참여율 100%</h5>
-              <div class="btn">
-                <button type="button"><a href="https://preed24.com/" target="_blank">View Site</a></button>
-                <!-- <button type="button"><a href="https://github.com/yunjeong920/kakaobank-site" target="_blank">Git Hub</a></button> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img">
-              <img src="./img/port/port-img07.png" alt="">
-            </div>
-            <div class="card-text">
-              <h4>INSHOW</h4>
-              <br>
-              <h5><i class="ri-code-s-slash-line"></i>USE</h5>
-              <p><span>HTML</span><span>SCSS</span><span>KakaoAPI</span>  <span>JAVASCRIPT</span><span>JQUERY</span> <span>SWIPER</span></p>
-              <h5><i class="ri-pie-chart-line"></i>참여율 100%</h5>
-              <div class="btn">
-                <button type="button"><a href="http://interiorshow.kr/" target="_blank">View Site</a></button>
-                <!-- <button type="button"><a href="https://github.com/yunjeong920/ssg-site" target="_blank">Git Hub</a></button> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-img">
-              <img src="./img/port/port-img08.png" alt="">
-            </div>
-            <div class="card-text">
-              <h4>ARCHERFISH POND</h4>
-              <h4>물총고기연못</h4>
-              <h5><i class="ri-code-s-slash-line"></i>USE</h5>
-              <p><span>HTML</span><span>SCSS</span><span>KakaoAPI</span>  <span>JAVASCRIPT</span><span>JQUERY</span><span>SWIPER</span></p>
-              <h5><i class="ri-pie-chart-line"></i>참여율 100%</h5>
-              <div class="btn">
-                <button type="button"><a href="https://nero29.cafe24.com/" target="_blank">View Site</a></button>
-                <!-- <button type="button"><a href="https://github.com/yunjeong920/kakaobank-site" target="_blank">Git Hub</a></button> -->
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- about me -->
-  <section class="about">
-    <div class="wrap">
-      <div class="page">
-        <h3 class="fs-40 letter">MY SKILL</h3>
-        <div class="skillset">
-          <div class="skill">
-            <div class="title">PHOTOSHOP</div>
-            <div class="bar">
-              <div class="inner-bar"></div>
-              <span class="percentage">80%</span>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="title">XD</div>
-            <div class="bar">
-              <div class="inner-bar"></div>
-              <span class="percentage">90%</span>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="title">HTML5</div>
-            <div class="bar">
-              <div class="inner-bar"></div>
-              <span class="percentage">90%</span>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="title">CSS3</div>
-            <div class="bar">
-              <div class="inner-bar"></div>
-              <span class="percentage">90%</span>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="title">JAVASCRIPT</div>
-            <div class="bar">
-              <div class="inner-bar"></div>
-              <span class="percentage">60%</span>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="title">JQUERY</div>
-            <div class="bar">
-              <div class="inner-bar"></div>
-              <span class="percentage">75%</span>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="title">SASS</div>
-            <div class="bar">
-              <div class="inner-bar"></div>
-              <span class="percentage">90%</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-
+</div>
 </body>
 </html>
