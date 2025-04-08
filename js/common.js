@@ -8,7 +8,7 @@ $(function () {
             end: "bottom",
             scrub: 1,
             pin: true,
-            markers: true,
+            markers: false,
         }
     })
         .to('.visual h1',{'opacity':'1','ease':'none','dutation':'10'})
