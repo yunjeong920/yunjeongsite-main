@@ -26,6 +26,11 @@
 .pot_wrap section.section06{background: #fff }
 .pot_wrap section .width{display: flex; height:100%; align-items: center; justify-content: center;}
 
+.pot_wrap h2.motion .char{display: inline-block; animation: slide-up 0.4s cubic-bezier(.5,0,.5,1) both; animation-delay: calc(100ms * var(--char-index));}
+@keyframes slide-up{
+    0%{transform: translateY(30px); opacity: 0;}
+    30%{transform: translateY(30px); opacity: 0;}
+}
 
 
 
