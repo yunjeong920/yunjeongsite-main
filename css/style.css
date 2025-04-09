@@ -25,6 +25,9 @@
 .pot_wrap section.section05{background: #c2c2c2 }
 .pot_wrap section.section06{background: #fff }
 .pot_wrap section .width{display: flex; height:100%; align-items: center; justify-content: center;}
+.pot_wrap section .img{width: 50%;}
+.pot_wrap section .img img{width: 100%;}
+.pot_wrap section .right{width: 50%;}
 
 .pot_wrap h2.motion .char{display: inline-block; animation: slide-up 0.4s cubic-bezier(.5,0,.5,1) both; animation-delay: calc(100ms * var(--char-index));}
 @keyframes slide-up{

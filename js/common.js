@@ -33,7 +33,7 @@ $(function () {
             start:'top top',
             pin: true,
             pinSpacing:false,
-            markers:true,
+            markers:false,
         })
     })
     ScrollTrigger.create({
