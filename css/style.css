@@ -123,11 +123,13 @@
 .section__title .line {
   display: block;
   overflow: hidden;
-  padding-bottom: 0.22em;
-  margin-bottom: -0.22em;
+  padding-bottom: 0.28em;
+  margin-bottom: -0.25em;
 }
 .section__title .line-inner {
   display: block;
+  padding-bottom: 0.25em;
+  line-height: 1.05;
   clip-path: inset(0 100% 0 0);
   -webkit-clip-path: inset(0 100% 0 0);
   transform: translateX(-24px);
@@ -320,10 +322,14 @@
 .intro__title .line {
   display: block;
   overflow: hidden;
-  padding-bottom: 0.22em;
-  margin-bottom: -0.22em;
+  padding-bottom: 0.28em;
+  margin-bottom: -0.25em;
 }
-.intro__title .line-inner { display: block; }
+.intro__title .line-inner {
+  display: block;
+  padding-bottom: 0.25em;
+  line-height: 1.05;
+}
 .intro__title em {
   font-family: var(--ff-serif);
   font-style: italic;
