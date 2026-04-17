@@ -45,16 +45,67 @@
 .section__head { margin-bottom: clamp(40px, 6vw, 80px); }
 
 .section__num {
-  display: inline-block;
-  font-size: var(--fs-sm);
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  color: var(--c-muted);
-  margin-bottom: 16px;
-  padding: 4px 10px;
-  border: 1px solid var(--c-line);
-  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding: 0;
+  border: 0;
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--c-text);
 }
+.section__num::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: var(--c-text);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
+.section__num::after {
+  content: 'CHAPTER';
+  font-family: var(--ff-sans);
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--c-muted);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.6s ease 0.4s, transform 0.6s var(--ease-out) 0.4s;
+}
+.section__num span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s ease 0.25s, transform 0.6s var(--ease-out) 0.25s;
+}
+.section__num.is-in::before { transform: scaleX(1); }
+.section__num.is-in span {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section__num.is-in::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 섹션 넘버는 opacity/transform 제어를 자식이 하므로 부모는 그대로 보이게 */
+.section__num[data-animate] {
+  opacity: 1;
+  transform: none;
+}
+
+/* contact 섹션(다크 배경)에서 색상 반전 */
+.contact .section__num { color: var(--c-bg); }
+.contact .section__num::before { background: var(--c-bg); }
+.contact .section__num::after { color: rgba(255,255,255,0.5); }
 
 .section__title {
   font-size: var(--fs-3xl);
@@ -63,6 +114,34 @@
   letter-spacing: -0.04em;
   color: var(--c-text);
 }
+
+/* 섹션 타이틀: 왼쪽 → 오른쪽 펼침 애니메이션 */
+.section__title[data-animate] {
+  opacity: 1;
+  transform: none;
+}
+.section__title .line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+.section__title .line-inner {
+  display: block;
+  clip-path: inset(0 100% 0 0);
+  -webkit-clip-path: inset(0 100% 0 0);
+  transform: translateX(-24px);
+  transition:
+    clip-path 1.1s cubic-bezier(0.77, 0, 0.175, 1),
+    -webkit-clip-path 1.1s cubic-bezier(0.77, 0, 0.175, 1),
+    transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.section__title.is-in .line-inner {
+  clip-path: inset(0 0 0 0);
+  -webkit-clip-path: inset(0 0 0 0);
+  transform: translateX(0);
+}
+.section__title.is-in .line:nth-child(2) .line-inner { transition-delay: 0.15s; }
 
 .section__desc {
   margin-top: 20px;
@@ -650,10 +729,6 @@
   background: var(--c-text);
   color: var(--c-bg);
   overflow: hidden;
-}
-.contact .section__num {
-  color: rgba(255,255,255,0.5);
-  border-color: rgba(255,255,255,0.15);
 }
 .contact .section__title { color: var(--c-bg); }
 
