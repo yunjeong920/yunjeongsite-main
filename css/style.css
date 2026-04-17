@@ -508,11 +508,43 @@
 }
 .work:nth-child(even) { transform: translateY(clamp(30px, 5vw, 80px)); }
 
-.work__link { display: block; transition: transform 0.6s var(--ease); }
+.work__link {
+  display: block;
+  position: relative;
+  transition: transform 0.6s var(--ease);
+}
 .work__link:hover .work__thumb { transform: scale(0.98); }
 .work__link:hover .work__bg,
-.work__link:hover .work__img { transform: scale(1.06); }
+.work__link:hover .work__img { transform: scale(1.08); }
 .work__link:hover .work__title { color: var(--c-accent); }
+
+/* 호버 시 우측 상단 "Visit ↗" 화살표 버튼 */
+.work__link::after {
+  content: '↗';
+  position: absolute;
+  top: clamp(16px, 2vw, 24px);
+  right: clamp(16px, 2vw, 24px);
+  display: grid;
+  place-items: center;
+  width: clamp(48px, 5vw, 60px);
+  height: clamp(48px, 5vw, 60px);
+  background: var(--c-accent);
+  color: var(--c-text);
+  border-radius: 50%;
+  font-size: clamp(22px, 2vw, 26px);
+  font-weight: 600;
+  line-height: 1;
+  opacity: 0;
+  transform: translate(12px, -12px) scale(0.7) rotate(-12deg);
+  transition: opacity 0.35s var(--ease), transform 0.5s var(--ease);
+  z-index: 3;
+  pointer-events: none;
+  box-shadow: 0 10px 24px -10px rgba(0,0,0,0.25);
+}
+.work__link:hover::after {
+  opacity: 1;
+  transform: translate(0, 0) scale(1) rotate(0);
+}
 
 .work__thumb {
   position: relative;
@@ -523,6 +555,19 @@
   background: var(--c-bg-alt);
   transition: transform 0.6s var(--ease);
 }
+
+/* 이미지 위 다크 그라데이션 오버레이 */
+.work__thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.45) 100%);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+  pointer-events: none;
+  z-index: 1;
+}
+.work__link:hover .work__thumb::after { opacity: 1; }
 .work__bg {
   position: absolute;
   inset: 0;
@@ -564,6 +609,16 @@
   color: var(--c-text);
   margin-bottom: 6px;
   transition: color 0.3s;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-bottom: 2px;
+  transition: background-size 0.5s var(--ease), color 0.3s;
+}
+.work__link:hover .work__title {
+  background-size: 100% 1px;
 }
 .work__meta {
   grid-column: 2;
@@ -583,6 +638,11 @@
   background: var(--c-bg-alt);
   border-radius: 100px;
   color: var(--c-text);
+  transition: background 0.3s, color 0.3s;
+}
+.work__link:hover .work__tags li {
+  background: var(--c-text);
+  color: var(--c-bg);
 }
 
 /* ========== CONTACT ========== */
