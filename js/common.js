@@ -71,8 +71,15 @@
     });
   }
 
-  /* ---------- Reveal on scroll (인트로 제외) ---------- */
-  const revealTargets = $$('[data-animate]').filter(el => !el.closest('.intro'));
+  /* ---------- Reveal on scroll (인트로·GSAP 제어 요소 제외) ---------- */
+  const hasGsap = !!window.gsap && !prefersReducedMotion;
+
+  const revealTargets = $$('[data-animate]').filter(el => {
+    if (el.closest('.intro')) return false;
+    if (hasGsap && el.matches('.work')) return false;
+    return true;
+  });
+
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -136,7 +143,52 @@
     $$('.intro [data-animate]').forEach(el => el.classList.add('is-in'));
   }
 
-  /* 스크롤 parallax 제거 — 성능 이슈로 CSS 호버만 유지 */
+  /* ---------- GSAP ScrollTrigger 등록 ---------- */
+  const hasScrollTrigger = hasGsap && !!window.ScrollTrigger;
+  if (hasScrollTrigger) gsap.registerPlugin(ScrollTrigger);
+
+  /* ---------- GSAP: Skills 로고 그리드 stagger ---------- */
+  if (hasGsap) {
+    const skillsStack = $('.skills__stack');
+    const stackItems = $$('.stack-item');
+    if (skillsStack && stackItems.length) {
+      gsap.set(stackItems, { opacity: 0, y: 24, scale: 0.85 });
+      gsap.to(stackItems, {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.55,
+        ease: 'back.out(1.6)',
+        stagger: 0.05,
+        scrollTrigger: hasScrollTrigger ? {
+          trigger: skillsStack,
+          start: 'top 80%',
+          once: true,
+        } : undefined,
+      });
+    }
+  }
+
+  /* ---------- GSAP: Works 카드 그리드 stagger ---------- */
+  if (hasGsap) {
+    const worksList = $('.works__list');
+    const workItems = $$('.work');
+    if (worksList && workItems.length) {
+      gsap.set(workItems, { opacity: 0, y: 60 });
+      gsap.to(workItems, {
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        stagger: 0.12,
+        scrollTrigger: hasScrollTrigger ? {
+          trigger: worksList,
+          start: 'top 85%',
+          once: true,
+        } : undefined,
+      });
+    }
+  }
 
   /* ---------- Current year (footer) ---------- */
   const yearEl = document.querySelector('[data-year]');
