@@ -123,8 +123,8 @@
 .section__title .line {
   display: block;
   overflow: hidden;
-  padding-bottom: 0.08em;
-  margin-bottom: -0.08em;
+  padding-bottom: 0.22em;
+  margin-bottom: -0.22em;
 }
 .section__title .line-inner {
   display: block;
@@ -320,8 +320,8 @@
 .intro__title .line {
   display: block;
   overflow: hidden;
-  padding-bottom: 0.05em;
-  margin-bottom: -0.05em;
+  padding-bottom: 0.22em;
+  margin-bottom: -0.22em;
 }
 .intro__title .line-inner { display: block; }
 .intro__title em {
