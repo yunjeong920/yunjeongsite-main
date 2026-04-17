@@ -1,74 +1,401 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>Yunjeong Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0"/>
-    <meta property="og:image" content="/img/thum.png">
-    <meta property="og:title" content="이윤정 포트폴리오">
-    <meta property="og:description" content="Leeyunjeong Portfolio">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="5년차 웹퍼블리셔 LEE YUN JEONG 포트폴리오. 웹 표준과 접근성을 기반으로 한 반응형 웹사이트 제작.">
+  <meta name="author" content="LEE YUN JEONG">
+  <meta property="og:title" content="LEE YUN JEONG — Web Publisher Portfolio">
+  <meta property="og:description" content="웹 표준과 접근성을 생각하는 웹퍼블리셔의 포트폴리오">
+  <meta property="og:type" content="website">
+  <title>LEE YUN JEONG — Web Publisher Portfolio</title>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Outfit:wght@900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="./css/initial.css">
-    <link rel="stylesheet" href="./css/animate.css">
-    <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script type="text/javascript" defer src="./js/common.js"></script>
-    <script type="text/javascript" defer src="./js/scrolla.jquery.min.js"></script>
-    <script type="text/javascript" defer src="./js/splitting.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+  <link rel="stylesheet" href="css/initial.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="wrap">
-    <div class="visual">
-        <video muted loop autoplay playsinline>
-            <source src="./img/visual2.mp4" type="video/mp4">
-        </video>
-      <!--<img src="./img/main-bg.jpg" alt="">-->
-        <h1><span>Lee yun jeong</span> Portfolio Page</h1>
+
+<a href="#main" class="skip-link">본문 바로가기</a>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="#intro" class="logo" aria-label="LEE YUN JEONG 홈으로 이동">
+      <span class="logo__mark">YJ</span>
+      <span class="logo__text">Lee Yun Jeong</span>
+    </a>
+
+    <nav class="gnb" aria-label="주 메뉴">
+      <ul class="gnb__list">
+        <li><a href="#about" class="gnb__link">About</a></li>
+        <li><a href="#skills" class="gnb__link">Skills</a></li>
+        <li><a href="#works" class="gnb__link">Works</a></li>
+        <li><a href="#contact" class="gnb__link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button type="button" class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴" hidden>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ===== INTRO ===== -->
+  <section class="intro" id="intro" aria-labelledby="intro-title">
+    <div class="intro__inner">
+      <p class="intro__badge" data-animate="fade-up">
+        <span class="dot" aria-hidden="true"></span>
+        Publisher &amp; Developer · 5 years
+      </p>
+
+      <h1 class="intro__title" id="intro-title">
+        <span class="line"><span class="line-inner">Code the</span></span>
+        <span class="line"><span class="line-inner"><em>Experience</em>,</span></span>
+        <span class="line"><span class="line-inner">Craft the Detail.</span></span>
+      </h1>
+
+      <p class="intro__desc" data-animate="fade-up">
+        웹 표준과 접근성을 기반으로 UI를 설계하고,<br>
+        PHP·그누보드까지 다루는 <strong>퍼블리셔 겸 개발자 이윤정</strong>입니다.
+      </p>
+
+      <div class="intro__meta" data-animate="fade-up">
+        <span>Daegu, Korea</span>
+        <span aria-hidden="true">·</span>
+        <span>Available for projects</span>
+      </div>
     </div>
-</div>
-<div class="pot_wrap">
-    <section class="section01">
-        <div class="width">
-            <div class="img"><img src="./img/port/port-img01.png" alt=""></div>
-            <div class="right">
-                <h2 class="animate" data-animate="motion" data-splitting>대구 신세계백화점</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <ul>
-                    <li>그누보드</li>
-                    <li>PHP</li>
-                    <li>CSS</li>
-                    <li>Pc / Mobile</li>
-                </ul>
-            </div>
+
+    <div class="intro__scroll" aria-hidden="true" data-animate="fade-up">
+      <span>Scroll</span>
+      <i class="line-v"></i>
+    </div>
+
+    <div class="intro__marquee" aria-hidden="true" data-animate="fade-up">
+      <div class="marquee__track">
+        <span>HTML5</span><span>·</span>
+        <span>CSS3</span><span>·</span>
+        <span>JavaScript</span><span>·</span>
+        <span>SCSS</span><span>·</span>
+        <span>PHP</span><span>·</span>
+        <span>Gnuboard</span><span>·</span>
+        <span>Responsive</span><span>·</span>
+        <span>Accessibility</span><span>·</span>
+        <span>Interaction</span><span>·</span>
+        <span>GSAP</span><span>·</span>
+        <span>HTML5</span><span>·</span>
+        <span>CSS3</span><span>·</span>
+        <span>JavaScript</span><span>·</span>
+        <span>SCSS</span><span>·</span>
+        <span>PHP</span><span>·</span>
+        <span>Gnuboard</span><span>·</span>
+        <span>Responsive</span><span>·</span>
+        <span>Accessibility</span><span>·</span>
+        <span>Interaction</span><span>·</span>
+        <span>GSAP</span><span>·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="section__num">01</p>
+        <h2 class="section__title" id="about-title" data-animate="fade-up">About</h2>
+      </header>
+
+      <div class="about__grid">
+        <div class="about__lead" data-animate="fade-up">
+          <p>
+            5년간 다양한 웹 프로젝트를 진행하며<br>
+            <strong>웹 표준 · 접근성 · 성능</strong>을 지키는 마크업을 만들어왔습니다.
+          </p>
         </div>
-    </section>
-    <section class="section02">
-        <div class="width">
-            <div class="img"><img src="./img/port/port-img08.png" alt=""></div>
-            <div class="right">
-                <h2 class="animate" data-animate="motion" data-splitting>Archer fishpond</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <ul>
-                    <li>그누보드</li>
-                    <li>PHP</li>
-                    <li>CSS</li>
-                    <li>Pc / Mobile</li>
-                </ul>
-            </div>
+
+        <div class="about__body">
+          <p data-animate="fade-up">
+            디자이너·개발자 사이에서 의도를 정확히 번역하는 것이 퍼블리셔의 역할이라고 생각합니다.
+            시안의 의도를 해치지 않으면서 반응형/접근성/성능의 기준을 지키는 코드를 씁니다.
+          </p>
+          <p data-animate="fade-up">
+            최근에는 GSAP 기반 인터랙션, CSS 애니메이션 최적화,
+            Lighthouse 성능 개선에 관심이 많습니다.
+          </p>
+
+          <dl class="about__info">
+            <div><dt>Name</dt><dd>Lee Yun Jeong</dd></div>
+            <div><dt>Role</dt><dd>Web Publisher / Front-end</dd></div>
+            <div><dt>Career</dt><dd>5 years</dd></div>
+            <div><dt>Location</dt><dd>Daegu, Korea</dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:yunjeong920@naver.com">yunjeong920@naver.com</a></dd></div>
+          </dl>
         </div>
-    </section>
-</div>
-<script src="./js/wow.min.js"></script>
-<script>
-    new WOW().init();
-</script>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills section" id="skills" aria-labelledby="skills-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="section__num">02</p>
+        <h2 class="section__title" id="skills-title" data-animate="fade-up">Skills</h2>
+        <p class="section__desc" data-animate="fade-up">
+          퍼블리싱부터 가벼운 백엔드(PHP·그누보드)까지, 실무에서 쓰는 도구들입니다.
+        </p>
+      </header>
+
+      <div class="skills__layout">
+
+        <!-- Left: Editorial Table -->
+        <div class="skills__table" data-animate="fade-up">
+          <dl>
+            <div class="row">
+              <dt><span class="idx">01</span> Markup</dt>
+              <dd>HTML5 · Semantic · WAI-ARIA · SEO</dd>
+            </div>
+            <div class="row">
+              <dt><span class="idx">02</span> Styling</dt>
+              <dd>CSS3 · SCSS · Responsive · Animation</dd>
+            </div>
+            <div class="row">
+              <dt><span class="idx">03</span> Interaction</dt>
+              <dd>JavaScript (ES6+) · jQuery · GSAP · Swiper</dd>
+            </div>
+            <div class="row">
+              <dt><span class="idx">04</span> Backend</dt>
+              <dd>PHP · Gnuboard5 · MySQL (basic)</dd>
+            </div>
+            <div class="row">
+              <dt><span class="idx">05</span> Design</dt>
+              <dd>Figma · Photoshop · Illustrator</dd>
+            </div>
+            <div class="row">
+              <dt><span class="idx">06</span> Tools</dt>
+              <dd>Git · GitHub · VS Code · Jira</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Right: Logo Stack -->
+        <div class="skills__stack" data-animate="fade-up" aria-label="기술 스택 로고">
+          <ul class="stack-grid">
+            <li class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" width="40" height="40" loading="lazy">
+              <span>HTML5</span>
+            </li>
+            <li class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" width="40" height="40" loading="lazy">
+              <span>CSS3</span>
+            </li>
+            <li class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="" width="40" height="40" loading="lazy">
+              <span>SCSS</span>
+            </li>
+            <li class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" width="40" height="40" loading="lazy">
+              <span>JavaScript</span>
+            </li>
+            <li class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt="" width="40" height="40" loading="lazy">
+              <span>jQuery</span>
+            </li>
+            <li class="stack-item stack-item--text" aria-label="GSAP">
+              <strong class="badge badge--accent">G</strong>
+              <span>GSAP</span>
+            </li>
+            <li class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="" width="40" height="40" loading="lazy">
+              <span>PHP</span>
+            </li>
+            <li class="stack-item stack-item--text" aria-label="Gnuboard5">
+              <strong class="badge">G5</strong>
+              <span>Gnuboard</span>
+            </li>
+            <li class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" width="40" height="40" loading="lazy">
+              <span>MySQL</span>
+            </li>
+            <li class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="" width="40" height="40" loading="lazy">
+              <span>Figma</span>
+            </li>
+            <li class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" width="40" height="40" loading="lazy">
+              <span>Git</span>
+            </li>
+            <li class="stack-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="" width="40" height="40" loading="lazy">
+              <span>Photoshop</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORKS ===== -->
+  <section class="works section" id="works" aria-labelledby="works-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="section__num">03</p>
+        <h2 class="section__title" id="works-title" data-animate="fade-up">
+          Selected<br>Works<span class="dot-accent">.</span>
+        </h2>
+        <p class="section__desc" data-animate="fade-up">
+          최근 5년간 진행한 프로젝트 중 선별한 6개의 작업물입니다.
+        </p>
+      </header>
+
+      <ul class="works__list">
+        <li class="work" data-animate="fade-up">
+          <a href="#" class="work__link" aria-label="프로젝트 상세 보기: Finova Bank">
+            <div class="work__thumb">
+              <img src="img/work-01.png" alt="" class="work__img" loading="lazy" decoding="async">
+            </div>
+            <div class="work__info">
+              <span class="work__num">01</span>
+              <h3 class="work__title">Finova Bank</h3>
+              <p class="work__meta">Corporate · Responsive · 2025</p>
+              <ul class="work__tags"><li>HTML</li><li>SCSS</li><li>jQuery</li><li>PHP</li><li>Gnuboard5</li></ul>
+            </div>
+          </a>
+        </li>
+
+        <li class="work" data-animate="fade-up">
+          <a href="#" class="work__link" aria-label="프로젝트 상세 보기: Atelier Muse">
+            <div class="work__thumb">
+              <img src="img/work-02.png" alt="" class="work__img" loading="lazy" decoding="async">
+            </div>
+            <div class="work__info">
+              <span class="work__num">02</span>
+              <h3 class="work__title">Atelier Muse</h3>
+              <p class="work__meta">Brand · Interaction · 2025</p>
+              <ul class="work__tags"><li>HTML</li><li>CSS</li><li>jQuery</li><li>PHP</li><li>Swiper</li></ul>
+            </div>
+          </a>
+        </li>
+
+        <li class="work" data-animate="fade-up">
+          <a href="#" class="work__link" aria-label="프로젝트 상세 보기: Nova Commerce">
+            <div class="work__thumb">
+              <img src="img/work-03.png" alt="" class="work__img" loading="lazy" decoding="async">
+            </div>
+            <div class="work__info">
+              <span class="work__num">03</span>
+              <h3 class="work__title">Nova Commerce</h3>
+              <p class="work__meta">E-commerce · Reactive · 2024</p>
+              <ul class="work__tags"><li>HTML</li><li>SCSS</li><li>jQuery</li><li>PHP</li><li>Gnuboard5</li></ul>
+            </div>
+          </a>
+        </li>
+
+        <li class="work" data-animate="fade-up">
+          <a href="#" class="work__link" aria-label="프로젝트 상세 보기: Loop Studio">
+            <div class="work__thumb">
+              <img src="img/work-04.png" alt="" class="work__img" loading="lazy" decoding="async">
+            </div>
+            <div class="work__info">
+              <span class="work__num">04</span>
+              <h3 class="work__title">Loop Studio</h3>
+              <p class="work__meta">Studio · Editorial · 2024</p>
+              <ul class="work__tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>GSAP</li></ul>
+            </div>
+          </a>
+        </li>
+
+        <li class="work" data-animate="fade-up">
+          <a href="#" class="work__link" aria-label="프로젝트 상세 보기: Hanul Resort">
+            <div class="work__thumb">
+              <img src="img/work-05.png" alt="" class="work__img" loading="lazy" decoding="async">
+            </div>
+            <div class="work__info">
+              <span class="work__num">05</span>
+              <h3 class="work__title">Hanul Resort</h3>
+              <p class="work__meta">Hospitality · Responsive · 2024</p>
+              <ul class="work__tags"><li>HTML</li><li>SCSS</li><li>jQuery</li><li>PHP</li><li>Swiper</li></ul>
+            </div>
+          </a>
+        </li>
+
+        <li class="work" data-animate="fade-up">
+          <a href="#" class="work__link" aria-label="프로젝트 상세 보기: Pixel Lab">
+            <div class="work__thumb">
+              <img src="img/work-06.png" alt="" class="work__img" loading="lazy" decoding="async">
+            </div>
+            <div class="work__info">
+              <span class="work__num">06</span>
+              <h3 class="work__title">Pixel Lab</h3>
+              <p class="work__meta">Agency · Motion · 2023</p>
+              <ul class="work__tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>GSAP</li></ul>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <header class="section__head">
+        <p class="section__num">04</p>
+        <h2 class="section__title" id="contact-title" data-animate="fade-up">
+          Let's work<br>together<span class="dot-accent">.</span>
+        </h2>
+      </header>
+
+      <div class="contact__body">
+        <a href="mailto:yunjeong920@naver.com" class="contact__email" data-animate="fade-up">
+          yunjeong920@naver.com
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+            <path d="M5 19L19 5M19 5H8M19 5V16" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <ul class="contact__links" data-animate="fade-up">
+          <li><a href="#" target="_blank" rel="noopener">GitHub ↗</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Notion ↗</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Instagram ↗</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <small>© 2026 Lee Yun Jeong. All rights reserved.</small>
+    <p class="footer__back">
+      <a href="#intro">Back to top ↑</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="js/common.js" defer></script>
+
 </body>
 </html>
